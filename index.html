@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Louis Emekene | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --fg: #333;
+      --card: #ffffff;
+      --accent: #1e293b;
+      --link: #3b82f6;
+    }
+    .theme-dark {
+      --bg: #0f172a;
+      --fg: #e2e8f0;
+      --card: #1e293b;
+      --accent: #0ea5e9;
+      --link: #38bdf8;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background-color: var(--accent);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: var(--accent);
+    }
+    .project, .skill {
+      background: var(--card);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--accent);
+      color: white;
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .button {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background: var(--link);
+      color: white;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Louis Emekene</h1>
+      <p>Electrical/Electronics Engineer | Developer | Data Enthusiast</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="button" onclick="toggleTheme()">Toggle Dark/Light</button>
+        <a href="Louis_Emekene_CV.pdf" class="button" download>Download CV</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m a recent graduate in Electrical/Electronics Engineering from the University of Benin, passionate about using technology to solve real-world problems. I combine software development, data science, and hardware tinkering to build practical solutions.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Network Monitoring Dashboard</h3>
+        <p>A Flask-powered monitoring system that pings devices, logs results in JSON, and displays real-time status using a frontend SPA.</p>
+      </div>
+      <div class="project">
+        <h3>Lazy Landmark Finder</h3>
+        <p>A deep learning project that uses a fine-tuned MobileNet model to recognize famous landmarks in low-quality images.</p>
+      </div>
+      <div class="project">
+        <h3>Self-Driving RC Car</h3>
+        <p>Modified an RC car using Raspberry Pi and OpenCV for real-time object detection and autonomous navigation.</p>
+      </div>
+      <div class="project">
+        <h3>Blockchain Blood Donation System</h3>
+        <p>Designed a prototype and architecture for a blockchain-based platform to improve transparency in blood donation logistics.</p>
+      </div>
+      <div class="project">
+        <h3>Internet Use & Happiness Study</h3>
+        <p>Performed EDA on European social data to analyze the correlation between internet use and happiness before and after COVID-19.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill">
+        <p><strong>Languages & Tools:</strong> Python, Flask, HTML/CSS, Bash, Git, Postman</p>
+        <p><strong>Technologies:</strong> React (learning), Raspberry Pi, LoRaWAN, OpenCV</p>
+        <p><strong>Areas of Interest:</strong> Data Science, IoT, Networking, Blockchain, AI for Energy Efficiency</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:louisemekene189@gmail.com">louisemekene189@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Louis-Emekene" target="_blank">Louis-Emekene</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/louis-emekene" target="_blank">louis-emekene</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Louis Emekene. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('theme-dark');
+    }
+  </script>
+</body>
+</html>
