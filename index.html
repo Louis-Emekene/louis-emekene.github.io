@@ -1,100 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Louis Emekene | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f9f9f9;
-      --fg: #333;
-      --card: #ffffff;
-      --accent: #1e293b;
-      --link: #3b82f6;
-    }
-    .theme-dark {
-      --bg: #0f172a;
-      --fg: #e2e8f0;
-      --card: #1e293b;
-      --accent: #0ea5e9;
-      --link: #38bdf8;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      transition: background-color 0.3s, color 0.3s;
-    }
-    header {
-      background-color: var(--accent);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h1, h2 {
-      color: var(--accent);
-    }
-    .project, .skill {
-      background: var(--card);
-      border-radius: 0.75rem;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: var(--accent);
-      color: white;
-    }
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .button {
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      background: var(--link);
-      color: white;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
   <div id="app">
     <header>
-      <h1>Louis Emekene</h1>
-      <p>Electrical/Electronics Engineer | Developer | Data Enthusiast</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="actions">
-        <button class="button" onclick="toggleTheme()">Toggle Dark/Light</button>
-        <a href="Louis_Emekene_CV.pdf" class="button" download>Download CV</a>
+      <!-- Profile Image -->
+      <img src="Louis_DP.jpg" alt="Display Picture" class="profile-pic" />
+
+      <!-- Theme Toggle Button -->
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode">
+        <span class="theme-icon">
+          <!-- Heroicons Moon -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12.79A9 9 0 0111.21 3a7 7 0 000 14A9 9 0 0121 12.79z" />
+          </svg>
+          <!-- Heroicons Sun -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m8.66-9H21M3 12H2.34M16.95 7.05l.71-.71M7.05 16.95l-.71.71M16.95 16.95l.71.71M7.05 7.05l-.71-.71M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </span>
+        <span class="theme-text">Dark Mode</span>
+      </button>
+
+      <!-- Main Header Content -->
+      <div class="header-content">
+        <h1>Louis Emekene</h1>
+        <p>Electrical/Electronics Engineer | AI Engineer | Data Enthusiast</p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
 
@@ -148,10 +97,6 @@
     </footer>
   </div>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('theme-dark');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
